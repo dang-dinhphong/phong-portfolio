@@ -5,9 +5,7 @@
 	<meta charset="UTF-8">
 	<title>Dang Dinh Phong - Portfolio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!--オリジナルCSSファイル-->
 	<link rel="stylesheet" href="./CSS/style.css">
-	<!--ファビコン追加-->
 	<link rel="icon" type="image/png" href="./image/favicon.png">
 	<!--GoogleFonts-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,39 +14,27 @@
 </head>
 
 <body>
-	<!--「サイドバー(PC)」-->
-	<ul class="nav">
-		<li><img class="nav-img" src="./image/favicon.png" alt="header-pic"></li>
-		<li><a href="#introduce">Profile</a></li>
-		<li><a href="#skills">Skills</a></li>
-		<li><a href="#works">Works</a></li>
-		<li><a href="#contact">Contact</a></li>
-	</ul>
 
-	<!-- モバイル用ハンバーガーメニュー -->
-	<!--ハンバーガーメニューのアイコン-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<div class="topnav">
-		<a>Dang Dinh Phong</a>
-		<!--ナビゲーションリンク-->
-		<div id="myLinks">
-			<a href="#introduce">Profile</a>
-			<a href="#skills">Skills</a>
-			<a href="#works">Works</a>
-			<a href="#contact">Contact</a>
+	<header class="main-header">
+		<div class="header-logo">
+			<img src="./image/favicon.png" alt="logo">
+			<span class="site-name">Dinh Phong</span>
 		</div>
-		<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-			<i class="fa fa-bars"></i>
-		</a>
-	</div>
 
-	<!--本文-->
+		<nav class="nav-container" id="navMenu">
+			<ul class="nav-links">
+				<li><a href="#introduce">Profile</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#works">Works</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
 	<div class="content">
-		<!--自己紹介ブロック-->
 		<section id="introduce">
 			<h2>Profile</h2>
-			<div class="introduce-grid">
+			<div class="grid-layout">
 				<div class="item-box">
 					<h3>基本情報</h3>
 					<ul>
@@ -58,228 +44,91 @@
 					</ul>
 				</div>
 				<div class="item-box">
-					<h3>経歴</h3>
-					<ul>
-						<li>・株式会社uluca（現職）</li>
-						<li>・○○○株式会社</li>
-						<li>・4年制大学卒</li>
-					</ul>
-				</div>
-
-				<div class="item-box">
 					<h3>所有資格</h3>
-					<ul>
-						<li>・TOEIC 915点</li>
-						<li>・日本語JLPT N1</li>
-						<li>・色彩検定 3級</li>
-					</ul>
-				</div>
-
-				<div class="item-box">
-					<h3>今後の展望</h3>
-					<ul>
-						<li>・早期にプロジェクトの即戦力となり、これまでの経験を活かして成果創出に貢献いたします。</li>
-						<li>・最新のIT知識・技術を継続的に探求・適用します。</li>
+					<ul class="badges">
+						<li class="badge-blue">TOEIC 915点</li>
+						<li class="badge-blue">日本語JLPT N1</li>
+						<li class="badge-blue">色彩検定 3級</li>
 					</ul>
 				</div>
 				<div class="item-box">
 					<h3>趣味</h3>
-					<ul>
-						<li>・スタンドアップコメディ</li>
-						<li>・ポッドキャスト</li>
-						<li>・POP音楽</li>
-					</ul>
+					<p>スタンドアップコメディ / ポッドキャスト / POP音楽</p>
 				</div>
 			</div>
-
 		</section>
 
-		<!--スキルブロック-->
 		<section id="skills">
 			<h2>Skills</h2>
-			<div class="skill-grid">
+			<div class="grid-layout">
 				<div class="item-box">
-					<h3>Spring</h3>
+					<h3>Spring Framework</h3>
 					<ul>
-						<li><strong>①MVC</strong></li>
-						<li>・基本操作、画面遷移、フォーム処理、スコープ</li><br>
-
-						<li><strong>②データベース操作（CRUD処理）</strong></li>
-						<li>・MyBatis手法</li>
-						<li>・JPA/JPQL/JDBC手法</li><br>
-
-						<li><strong>③バリデーション</strong></li>
-						<li>・入力チェック、メッセージ出力、フィルタ</li><br>
-
-						<li><strong>④Thymeleaf</strong></li>
-						<li>・Thymeleaf基本操作、レイアウト入れ替え</li><br>
-					</ul>
-				</div>
-
-				<div class="item-box">
-					<h3>WEB・クラウド</h3>
-					<ul>
-						<li><strong>HTML, CSS</strong></li>
-						<li>・Web構造、タグの種類、プロパティの種類</li>
-						<li>・ポートフォリオの構築</li><br>
-
-						<li><strong>JavaScript</strong></li>
-						<li>・基礎知識、DOM、jQuery、Ajax、CSS関連</li><br>
-
-						<li><strong>クラウド基礎</strong></li>
-						<li>・クラウド概要、AWS概要（IAM, VPC, EC2）</li>
-						<li>・EC2による静的ページの環境構築</li>
-					</ul>
-				</div>
-
-				<div class="item-box">
-					<h3>データベース（OracleDB）</h3>
-					<ul>
-						<li>・環境構築、CRUD処理</li>
-						<li>・集約、並び替え</li>
-						<li>・結合：内部結合・外部結合・複数結合</li>
-						<li>・サブクエリ</li>
+						<li><strong>MVC:</strong> 画面遷移, フォーム処理</li>
+						<li><strong>DB操作:</strong> MyBatis, JPA/JDBC</li>
+						<li><strong>Other:</strong> バリデーション, Thymeleaf</li>
 					</ul>
 				</div>
 				<div class="item-box">
-					<h3>Java</h3>
+					<h3>WEB / Cloud</h3>
 					<ul>
-						<li>・変数宣言、配列、条件分岐、繰り返し</li>
-						<li>・クラス、メソッド、継承、カプセル化</li>
-						<li>・コレクションフレームワーク、例外処理</li>
-						<li>・コーディング規約</li>
+						<li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+						<li><strong>Cloud:</strong> AWS (IAM, VPC, EC2)</li>
 					</ul>
 				</div>
-
+				<div class="item-box">
+					<h3>Database & Java</h3>
+					<ul>
+						<li><strong>OracleDB:</strong> CRUD, 結合, サブクエリ</li>
+						<li><strong>Java:</strong> OOP, コレクション, 例外処理</li>
+					</ul>
+				</div>
 			</div>
 		</section>
 
-		<!--成果物ブロック-->
 		<section id="works">
 			<h2>Works</h2>
-			<div class="work-grid">
+			<div class="grid-layout">
 				<div class="item-box">
-					<div>
-						<h3>個人開発演習</h3>
-						<strong>実践編</strong>
-						<ul>
-							<li><a href="https://github.com/danguluca2025/rt2-spring-app.git"
-									target="_blank">・GitHubリポジトリ</a></li>
-							<li><a href="https://www.notion.so/_-26914f9c939d80769ca4e5ca942cea4e"
-									target="_blank">・進捗管理</a></li>
-							<li><a href="http://localhost:7779/spring_crud/" target="_blank">・URL：</a>
-							</li>
-						</ul><br>
-						
-						
-						<strong>基礎編</strong>
-						<ul>
-							<li><a href="https://github.com/danguluca2025/rt2-spring-app.git"
-									target="_blank">・GitHubリポジトリ</a></li>
-							<li><a href="https://www.notion.so/_-26914f9c939d80769ca4e5ca942cea4e"
-									target="_blank">・進捗管理</a></li>
-							<li><a href="http://localhost:7779/spring_crud/" target="_blank">・実行URL：RT5_Spring_CRUD</a>
-							</li>
-						</ul>
+					<h3>個人開発演習</h3>
+					<p>Spring Boot / CRUD アプリケーション</p>
+					<div class="work-links">
+						<a href="https://github.com/danguluca2025/rt2-spring-app.git" target="_blank">GitHub</a>
+						<a href="https://www.notion.so/_-26914f9c939d80769ca4e5ca942cea4e" target="_blank">Notion</a>
 					</div>
 				</div>
 				<div class="item-box">
-					<div>
-						<h3>チーム開発演習</h3>
-						<ul>
-							<strong>個人ブラッシュアップ</strong>
-							<li><a href="https://github.com/danguluca2025/console_crud_user_dang.git"
-									target="_blank">RT1_Oracle_dang</a></li><br>
-							<strong>チームやり取り</strong>
-							<li><a href="https://github.com/danguluca2025/console_crud_user_team2.git"
-									target="_blank">RT1_Oracle_team2</a></li>
-						</ul>
+					<h3>チーム開発</h3>
+					<p>OracleDB / ユーザー管理システム</p>
+					<div class="work-links">
+						<a href="https://github.com/danguluca2025/console_crud_user_dang.git" target="_blank">GitHub</a>
 					</div>
-				</div>
-				<div class="item-box">
-					<h3>練習問題</h3>
-					<ul>
-						<strong>Spring</strong>
-						<li><a href="https://github.com/danguluca2025/RP1-spring-training.git" target="_blank">・実践編</a>
-							<a href="https://github.com/danguluca2025/spring_practice.git" target="_blank">・基礎編</a>
-						</li><br>
-
-						<strong>OracleDB</strong>
-						<li><a href="https://github.com/danguluca2025/Oracle_practice.git" target="_blank">・SQL</a>
-							<a href="https://github.com/danguluca2025/Oracle_practice_JDBC.git"
-								target="_blank">・JDBC</a>
-						</li><br>
-
-						<strong>Java基礎</strong>
-						<li>
-							<a href="https://github.com/danguluca2025/java-training.git" target="_blank">・基礎編</a>
-							<a href="https://github.com/danguluca2025/java-advanced-training.git"
-								target="_blank">・応用編</a>
-						</li>
-					</ul>
 				</div>
 			</div>
 		</section>
 
-		<!--お問い合せブロック-->
 		<section id="contact">
-			<!--お問合せ情報-->
 			<h2>Contact</h2>
-			<!--お問合せフォーム-->
-			<!--phpフォームが搭載していないため表示機能のみ-->
-			<div class="container">
-				<form action="">
-					<label for="fname">名前</label>
-					<input type="text" id="fname" name="fullname" placeholder="山田 太郎　 もしくは　Yamada Tarou">
-					<label for="pnounce">フリガナ</label>
-					<input type="text" id="pnounce" name="pronounce" placeholder="ヤマダ タロウ">
-					<label for="subject">お問い合わせ内容</label>
-					<textarea id="subject" name="subject" placeholder="ex: お仕事のご連絡など" style="height:100px"></textarea>
-					<input type="submit" value="送信">
-				</form>
+			<div class="contact-card">
+				<p>現在、新しいプロジェクトへの参画や技術的な交流を歓迎しております。</p>
+				<a href="mailto:your-email@example.com" class="contact-btn">メールを送る</a>
 			</div>
 		</section>
 
-		<!--copyright-->
-		<div class="footer">
-			<div class="copyright"><small>&copy; 2025 Dang Dinh Phong</small></div>
-		</div>
-
-		<!--scroll-to-topボタンHTML記述-->
-		<button onclick="topFunction()" id="myBtn" title="トップ">トップ</button>
+		<footer class="footer">
+			<small>&copy; 2025 Dang Dinh Phong</small>
+		</footer>
 	</div>
 
 	<script>
-		//トップへ戻るボタン設定
-		//ボタン表示を有効化する
-		let mybutton = document.getElementById("myBtn");
-
-		//トップ画面から20px下にスクロールされたら表示するように設定
-		window.onscroll = function () {scrollFunction()};
-		function scrollFunction() {
-			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-				mybutton.style.display = "block";
-			} else {
-				mybutton.style.display = "none";
+		function toggleMenu() {
+			document.getElementById("navMenu").classList.toggle("active");
+		}
+		function closeMenu() {
+			if (window.innerWidth <= 992) {
+				document.getElementById("navMenu").classList.remove("active");
 			}
 		}
-
-		//トップ画面に移動
-		function topFunction() {
-			document.body.scrollTop = 0; //Safari用
-			document.documentElement.scrollTop = 0; //Chrome, Firefox, IE, Opera用
-		}
-
-		//モバイルメニュー設定
-		function myFunction() {
-			var x = document.getElementById("myLinks");
-			if (x.style.display === "block") {
-				x.style.display = "none";
-			} else {
-				x.style.display = "block";
-			}
-		}
-
 	</script>
 </body>
 

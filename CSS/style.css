@@ -1,319 +1,218 @@
-@charset "UTF-8";
-
-/*共通部分
---------------------------------------------*/
+/* --- 1. Global & Smooth Scroll --- */
 html {
 	scroll-behavior: smooth;
 }
 
-body {
-	margin: 0;
-	font-family: "Noto Sans JP", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 400px;
-	font-style: normal;
+:root {
+	--primary: #2563eb;
+	--bg: #f8fafc;
+	--card: #ffffff;
+	--text: #1e293b;
+	--text-light: #64748b;
+	--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-h2,
-h3 {
-	font-weight: 500px;
-	padding: 10px 0;
-}
-
-h4 {
-	font-weight: 500px;
-}
-
-a:link {
-	text-decoration: none;
-}
-
-a:link:hover,
-a:visited:hover {
-	color: orangered;
-	border: 0.5px solid orangered;
-	border-radius: 5px;
-}
-
-li {
-	list-style-type: none;
-}
-
-/*ヘッダー
---------------------------------------------*/
-
-/*サイドバー
------------------------*/
-.nav {
-	list-style-type: none;
+* {
 	margin: 0;
 	padding: 0;
-	width: 20%;
-	background-color: #f1f1f1;
-	position: fixed;
-	height: 100%;
-	overflow: auto;
-	align-content: center;
-	text-align: center;
-}
-
-.nav li img {
-	width: 80%;
-	padding: 10px;
-	aspect-ratio: 1/1;
-}
-
-.nav li a {
-	display: block;
-	color: #000;
-	padding: 8px 16px;
-	text-decoration: none;
-}
-
-.nav li a:hover:not(.active) {
-	background-color: orange;
-	color: whitesmoke;
-	font-weight: bold;
-	border-radius: 0;
-	border: none;
-}
-
-/*モバイルメニュー無効化*/
-.topnav {
-	display: none;
-}
-
-/*本文
---------------------------------------------*/
-.content {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 10px;
-	justify-content: center;
-	margin-left: 20%;
-	padding: 1px 16px;
-	height: 1000px;
-}
-
-/*各ブロックの見出し調整*/
-h2 {
-	background-color: skyblue;
-	text-align: center;
-	border-radius: 8px;
-}
-
-/*自己紹介ブロック
------------------------*/
-.introduce-grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 10px;
-}
-
-/*スキルブロック
------------------------*/
-.skill-grid,
-.work-grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 10px;
-}
-
-/*自己紹介/スキル/成果物ブロック：item要素
------------------------*/
-.item-box {
-	background-color: aliceblue;
-	border-radius: 1rem;
-	padding: 1rem;
-
-	>ul {
-		justify-self: center;
-		list-style-type: none;
-		padding: 0;
-
-		>li {
-			padding: 0;
-		}
-	}
-}
-
-.work-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	justify-content: center;
-}
-
-/*scroll-to-topボタンの適用
------------------------*/
-#myBtn {
-	display: none;
-	position: fixed;
-	bottom: 20px;
-	right: 30px;
-	z-index: 99;
-	border: none;
-	outline: none;
-	background-color: orange;
-	color: antiquewhite;
-	cursor: pointer;
-	padding: 15px;
-	border-radius: 10px;
-	font-size: 15px;
-	opacity: 80%;
-	font-weight: bold;
-}
-
-#myBtn:hover {
-	background-color: orangered;
-	opacity: 100%;
-}
-
-/* お問い合わせフォーム 
------------------------*/
-input[type=text],
-select,
-textarea {
-	width: 100%;
-	padding: 12px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
 	box-sizing: border-box;
-	/*paddingおよびwidthを固定*/
-	margin-top: 6px;
-	margin-bottom: 16px;
-	resize: vertical
-		/*横置きで入力する際に入力ボックスのサイズを変更化する*/
 }
 
-/*送信ボタンを色付け*/
-input[type=submit] {
-	background-color: orange;
+body {
+	font-family: 'Noto Sans JP', sans-serif;
+	background-color: var(--bg);
+	color: var(--text);
+	line-height: 1.6;
+	overflow-x: hidden;
+}
+
+/* --- 2. Navigation (Desktop Side Menu) --- */
+.main-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 240px;
+	height: 100vh;
+	background: var(--card);
+	border-right: 1px solid #e2e8f0;
+	padding: 2.5rem 1.2rem;
+	display: flex;
+	flex-direction: column;
+	z-index: 2000;
+}
+
+.header-logo {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.header-logo img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid var(--primary);
+}
+
+.site-name {
+	display: block;
+	font-weight: 800;
+	color: var(--primary);
+	margin-top: 10px;
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: var(--text-light);
+	padding: 12px 15px;
+	display: block;
+	border-radius: 12px;
+	transition: var(--transition);
+	font-weight: 500;
+}
+
+.nav-links a:hover {
+	background: #eff6ff;
+	color: var(--primary);
+	transform: translateX(5px);
+}
+
+/* --- 3. Content Area --- */
+.content {
+	margin-left: 240px;
+	/* Offset for Desktop Side Menu */
+	padding: 3rem;
+	min-height: 100vh;
+}
+
+section {
+	max-width: 900px;
+	margin: 0 auto 4rem auto;
+	scroll-margin-top: 30px;
+}
+
+h2 {
+	font-size: 1.75rem;
+	margin-bottom: 1.5rem;
+	color: var(--text);
+	border-bottom: 2px solid var(--primary);
+	display: inline-block;
+}
+
+/* --- 4. Responsive Grid & Cards --- */
+.grid-layout {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1.5rem;
+}
+
+.item-box {
+	background: var(--card);
+	padding: 1.5rem;
+	border-radius: 16px;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+	transition: var(--transition);
+}
+
+.item-box:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.item-box h3 {
+	color: var(--primary);
+	margin-bottom: 1rem;
+}
+
+/* --- 5. Contact Card --- */
+.contact-card {
+	background: var(--primary);
 	color: white;
-	padding: 12px 20px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
+	padding: 2.5rem;
+	border-radius: 20px;
+	text-align: center;
 }
 
-/*送信ボタンのホバーに別の色付け*/
-input[type=submit]:hover {
-	background-color: orangered;
+.contact-btn {
+	display: inline-block;
+	margin-top: 1.2rem;
+	padding: 0.8rem 2rem;
+	background: white;
+	color: var(--primary);
+	text-decoration: none;
+	border-radius: 30px;
+	font-weight: bold;
 }
 
-/*フォームブロックに色調整、padding調整など*/
-.container {
-	border-radius: 5px;
-	background-color: #f2f2f2;
-	padding: 20px;
-}
+/* --- 6. Mobile Layout (Bottom Nav & Top Logo) --- */
+@media (max-width: 992px) {
 
-.footer {
-	margin-left: 20%;
-	padding: 10px;
-	height: max-content;
-}
-
-.copyright {
-	text-align: end;
-}
-
-@media screen and (max-width: 800px) {
-	.nav {
+	/* Side menu becomes a fixed Bottom Tab Bar */
+	.main-header {
 		width: 100%;
 		height: auto;
-		position: relative;
-		display: flex;
+		bottom: 0;
+		top: auto;
+		left: 0;
+		border-right: none;
+		border-top: 1px solid #e2e8f0;
+		padding: 0.8rem 0;
+		flex-direction: row;
 		justify-content: center;
-		justify-items: center;
-		background-color: aliceblue;
-		padding: 0 auto;
-
-		>li a {
-			font-weight: bold;
-		}
 	}
 
-	.nav-img {
-		display: none;
-	}
-
-	.gallery,
-	.introduce-grid,
-	.skill-grid,
-	.work-grid {
-		grid-template-columns: 1fr;
-	}
-
-	.item-box {
-		>ul {
-			justify-self: start;
-			list-style-type: none;
-			padding: auto;
-
-			>li {
-				padding: auto;
-			}
-		}
-	}
-
-	.content,
-	.introduce-grid {
-		margin-left: 0;
-	}
-
-
-	.footer {
-		background-color: antiquewhite;
-		margin-left: 0;
-		border-radius: 8px;
-	}
-
-	.copyright {
-		justify-content: center;
-		text-align: center;
-	}
-}
-
-
-
-@media screen and (max-width: 450px) {
-	.nav {
-		display: none;
-	}
-
-	/*モバイルメニューを有効化・設定------------------------------------*/
-	.topnav {
-		display: block;
-		overflow: hidden;
-		color: orangered;
-		position: relative;
-
-		>:first-child {
-			font-weight: bolder;
-		}
-	}
-
-	/* Hide the links inside the navigation menu (except for logo/home) */
-	.topnav #myLinks {
-		display: none;
-		font-weight: bold;
-		text-align: center;
-	}
-
-	/* Style navigation menu links */
-	.topnav a {
-		color: black;
-		padding: 14px 16px;
-		text-decoration: none;
-		font-size: 17px;
-		display: block;
-	}
-
-	/* Style the hamburger menu */
-	.topnav a.icon {
-		background-color: orangered;
+	/* Move Logo to the top of the page so it doesn't crowd buttons */
+	.header-logo {
 		position: absolute;
-		right: 0;
-		top: 0;
+		top: -100vh;
+		/* Hide logo from the bottom bar */
+	}
+
+	/* Create a separate small logo for top of mobile */
+	.content::before {
+		content: "";
+		display: block;
+		width: 40px;
+		height: 40px;
+		background: url('./image/favicon.png') no-repeat center;
+		background-size: contain;
+		margin: 0 auto 20px auto;
+		border-radius: 50%;
+	}
+
+	.site-name {
+		display: none;
+	}
+
+	.nav-links {
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-around;
+		padding: 0 10px;
+	}
+
+	.nav-links a {
+		padding: 8px 15px;
+		font-size: 0.85rem;
+		background: #f1f5f9;
+		border-radius: 10px;
+		text-align: center;
+	}
+
+	.content {
+		margin-left: 0;
+		padding: 2rem 1.2rem 80px 1.2rem;
+		/* Bottom padding for the nav bar */
+	}
+
+	section {
+		scroll-margin-top: 20px;
 	}
 }
