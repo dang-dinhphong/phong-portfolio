@@ -166,6 +166,19 @@ h3{
 		gap: 12px;
 		list-style: none;
 		padding: 0;
+		>li {
+			list-style: none;
+			padding-left: 0;
+			/* Space for the new icon */
+			margin-bottom: 0;
+		}
+
+		li::before {
+			content: "";
+			/* You can use a dash "-" or a dot "•" */
+			position: absolute;
+			left: 0;
+		}
 	}
 
 	.nav-links a {
@@ -249,23 +262,41 @@ h2 {
 	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
+/* --- Updated Contact Card (Matches your item-boxes) --- */
 .contact-card {
-	background: var(--primary);
-	color: white;
-	padding: 2.5rem;
-	border-radius: 20px;
-	text-align: center;
+    background: var(--card); /* Matches your white background cards */
+    color: var(--text);
+    padding: 2.5rem;
+    border-radius: 16px; /* Matching the 16px from your item-boxes */
+    text-align: center;
+    border: 1px solid #e2e8f0; /* Subtle border like the hover state of boxes */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
 }
 
+/* Hover effect to match your other boxes */
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Updated Contact Button (Zoom effect) --- */
 .contact-btn {
-	display: inline-block;
-	margin-top: 1rem;
-	padding: 0.8rem 2rem;
-	background: white;
-	color: var(--primary);
-	text-decoration: none;
-	border-radius: 30px;
-	font-weight: bold;
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 2.5rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth zoom */
+}
+
+.contact-btn:hover {
+    /* 👇 This creates the "bigger" zoom-in effect */
+    transform: scale(1.1); 
+    box-shadow: 0 10px 15px rgba(37, 99, 235, 0.2); /* Subtle glow matching primary color */
 }
 .work-tech {
     display: inline-block;
