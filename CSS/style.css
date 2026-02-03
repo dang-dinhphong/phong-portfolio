@@ -80,7 +80,7 @@ h3{
 
 	.site-name {
 		display: block;
-		font-weight: 800;
+		font-weight: 1000;
 		color: var(--primary);
 		margin-top: 10px;
 	}
@@ -116,6 +116,7 @@ h3{
 		position: relative;
 		left: 0;
 		text-align: center;
+		font-weight: 600;
 	}
 
 	.nav-links a:hover {
@@ -309,4 +310,55 @@ h2 {
     border-radius: 6px;
     border: 1px solid #e2e8f0;
     margin-bottom:10px;
+}
+/* --- 1. The Clean Setup --- */
+.work-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+.work-links a {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    
+    /* Give it a permanent shape so it doesn't "jump" on hover */
+    padding: 5px 12px;
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* --- 2. The Smooth Hover --- */
+.work-links a:hover {
+    background-color: var(--primary);
+    color: white;
+    /* Optional: subtle lift instead of forced padding */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+.profile-list {
+    list-style: none;
+    line-height: 2;
+}
+
+.profile-list strong {
+    color: var(--primary); /* Keeps the keys blue and consistent */
+    margin-right: 10px;
+    display: inline-block;
+    width: 50px; /* Aligns all the text perfectly */
+}
+
+.sub-text {
+    font-size: 0.7rem; /* Slightly smaller font */
+    color: var(--text-light); /* Greyer color so it's not the first thing they see */
+    margin-top: 5px;
+    border-top: 1px solid #e2e8f0; /* Subtle line to separate it from core info */
+    padding-top: 5px;
 }
