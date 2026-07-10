@@ -300,6 +300,57 @@ h2 {
 
 /*----------------------------------------------------------------------------*/
 
+/* ==========================================================================
+   PERSONALIZATION STYLES (Dang Dinh Phong Custom)
+   ========================================================================== */
+
+/* Bố cục cho phần Sở thích & Paiza */
+.hobby-layout {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+	gap: 1.5rem;
+}
+
+.hobby-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.hobby-header {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 12px;
+}
+
+.hobby-header h3 {
+	padding-bottom: 0; /* Gộp chung dòng với Icon */
+}
+
+.hobby-icon {
+	font-size: 1.5rem;
+}
+
+/* Hiệu ứng viền chuyển màu tinh tế cho ô Paiza (Tạo điểm nhấn thị giác) */
+.logic-card {
+	border-left: 4px solid var(--primary);
+}
+
+/* Đổi dấu chấm đầu dòng (bullet) thô kệch thành các Icon mang tính chất Công nghệ & Tăng tiến (Như level-up Pokémon) */
+.timeline-layout li::before {
+	content: "▹"; /* Dấu mũi tên hướng tới trước, lean và chuyên nghiệp hơn dấu chấm */
+	color: var(--primary);
+	font-weight: bold;
+}
+
+.pr-list li::before {
+	content: "⚡"; /* Thể hiện sự nhanh nhạy, tự động thích ứng */
+	font-size: 0.85rem;
+}
+
+/*----------------------------------------------------------------------------*/
+
 
 .item-box {
 	background: var(--card);
