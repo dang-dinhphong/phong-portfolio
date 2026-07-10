@@ -24,7 +24,8 @@
 		<nav class="nav-container" id="navMenu">
 			<ul class="nav-links">
 				<li><a href="#introduce">Profile</a></li>
-				<li><a href="#works">Works & Experience</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#works">Works</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
@@ -37,61 +38,100 @@
 				<h1>Dang Dinh Phong</h1>
 			</div>
 		</section>
+
+		<!-- --- SECTION 1: PROFILE --- -->
 		<section id="introduce">
 			<h2>Profile</h2>
-			<div class="grid-layout">
-				<div class="item-box">
-					<h3>基本情報</h3>
-					<ul>
-						<li><strong>名前：</strong> ダン ディンフォン</li>
-						<li><strong>年齢：</strong> 27歳</li>
-						<li><strong>職業：</strong> システムエンジニア</li>
-						<li><strong>活動：</strong> インフルエンサーマーケティング</li>
-						<li><strong>言語：</strong> 日本語 (N1) / 英語 (TOEIC 915) / ベトナム語</li>
-					</ul>
+			<div class="profile-layout">
+				<!-- Hàng trên: 2 box ngắn song song -->
+				<div class="profile-upper">
+					<div class="item-box">
+						<h3>基本情報</h3>
+						<ul>
+							<li><strong>名前：</strong> ダン ディンフォン</li>
+							<li><strong>年齢：</strong> 27歳</li>
+							<li><strong>職業：</strong> システムエンジニア</li>
+							<li><strong>活動：</strong> 動画制作受託（インフルエンサーマーケティング）</li>
+							<li><strong>言語：</strong> 日本語 (N1) / 英語 (TOEIC 915) / ベトナム語</li>
+						</ul>
+					</div>
+
+					<div class="item-box">
+						<h3>資格・学習目標</h3>
+						<strong>【取得済】</strong>
+						<ul>
+							<li>TOEIC 915点 / 日本語JLPT N1 / 色彩検定 3級</li>
+						</ul>
+						<br>
+						<strong>【取得目標】</strong>
+						<ul>
+							<li>Java SE Silver 17</li>
+							<li>AWS Cloud Practitioner</li>
+							<li>基本情報技術者試験</li>
+						</ul>
+					</div>
 				</div>
 
-				<div class="item-box">
-					<h3>資格・学習目標</h3>
-					<strong>【取得済】</strong>
-					<ul>
-						<li>TOEIC 915点 / 日本語JLPT N1 / 色彩検定 3級</li>
-					</ul>
-					<br>
-					<strong>【取得目標】</strong>
-					<ul>
-						<li>Java SE Silver 17</li>
-						<li>AWS Cloud Practitioner</li>
-						<li>基本情報技術者試験</li>
+				<!-- Hàng dưới: Box 自己PR rộng 100% -->
+				<div class="item-box profile-fullwidth">
+					<h3>自己PR（私の強み）</h3>
+					<p class="pr-lead">【自走力と柔軟な適応力で、即戦力として形にする力】</p>
+					<ul class="pr-list">
+						<li><strong>実務でのマルチタスク対応：</strong> 現在は配送・BtoC・自動車部品の3つの社内PJに並行して参画。環境構築からテスト仕様書の作成、検証まで柔軟に対応しています。</li>
+						<li><strong>ユーザー目線のUI/UX実装：</strong> BtoC向けサービスでは仕様書に基づく画面UI作成を担当。「書いてすぐ結果が見える」フロントエンドの実装力と、正確な画面表示の検証力を磨いています。</li>
+						<li><strong>技術への探究心：</strong> スクールで培ったJava/Spring Bootやテスト自動化の基礎に加え、現在は実務に必要な環境構築スキルや、日常的なアルゴリズム強化（Paiza等）で自走し続けています。</li>
 					</ul>
 				</div>
-
-				<div class="item-box">
-					<h3>自己PR</h3>
-					<p>【自走力と柔軟な適応力で、即戦力として形にする力】</p>
-					<ul>
-						<li><strong>実務でのマルチタスク対応：</strong>
-							現在は配送・BtoC・自動車部品の3つの社内PJに並行して参画。環境構築からテスト仕様書の作成、検証まで柔軟に対応しています。</li>
-						<li><strong>ユーザー目線のUI/UX実装：</strong>
-							BtoC向けサービスでは仕様書に基づく画面UI作成を担当。
-							「書いてすぐ結果が見える」フロントエンドの実装力と、正確な画面表示の検証力を磨いています。</li>
-						<li><strong>技術への探究心：</strong> スクールで培ったJava/Spring
-							Bootやテスト自動化の基礎に加え、現在は実務に必要な環境構築スキルや、日常的なアルゴリズム強化（Paiza等）で自走し続けています。</li>
-					</ul>
-				</div>
-
 			</div>
 		</section>
 
-		<section id="works">
-			<h2>Works & Experience</h2>
+		<!-- --- SECTION 2: SKILLS --- -->
+		<section id="skills">
+			<h2>Skills</h2>
 			<div class="grid-layout">
+				<div class="item-box">
+					<h3>Spring Framework</h3>
+					<ul class="work-features">
+						<li><strong>MVC設計:</strong> コントローラーによる制御、画面遷移、各種フォーム処理の実装</li>
+						<li><strong>データ連携:</strong> MyBatis、JPA、JDBCを用いた効率的なDBアクセスとCRUD処理</li>
+						<li><strong>共通機能:</strong> Thymeleafによる動的表示、バリデーションを用いたデータ整合性の確保</li>
+					</ul>
+					<div class="work-tech">Spring Boot / MyBatis / JPA / Thymeleaf</div>
+				</div>
 
 				<div class="item-box">
-					<span class="work-period">2026.03 - 現在 (5ヶ月)</span>
+					<h3>AWS インフラ構築演習</h3>
+					<ul class="work-features">
+						<li><strong>VPC設計:</strong> Public/Private Subnet、NAT Gatewayを用いたセキュアな環境構築</li>
+						<li><strong>サーバー構築:</strong> EC2へのミドルウェア設定およびWordPressシステムのデプロイ</li>
+						<li><strong>通信解析:</strong> TCP/IP、HTTP/HTTPSのパケット解析を通じたネットワーク挙動の理解</li>
+					</ul>
+					<div class="work-tech">VPC / EC2 / RDS / NAT Gateway / Linux</div>
+				</div>
+
+				<div class="item-box">
+					<h3>データベース & Java</h3>
+					<ul class="work-features">
+						<li><strong>OracleDB:</strong> CRUD操作に加え、複雑な結合（JOIN）やサブクエリによるデータ抽出</li>
+						<li><strong>Java OOP:</strong> クラス継承、インターフェース、コレクションを活用した堅牢な実装</li>
+						<li><strong>エラー制御:</strong> 例外処理（Exception）の実装を通じたプログラムの安定性向上</li>
+					</ul>
+					<div class="work-tech">Oracle XE / Java / OOP / SQL</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- --- SECTION 3: WORKS & EXPERIENCE --- -->
+		<section id="works">
+			<h2>Works & Experience</h2>
+			<div class="timeline-layout">
+
+				<!-- 1. 現職（最新） -->
+				<div class="item-box">
+					<span class="work-period">2026.02 - 現在 (5ヶ月)</span>
 					<h3>複数社内PJ（配送・BtoCサービス・自動車部品販売）</h3>
-					<p><strong>【概要】</strong> 社内PJ複数に対し、環境構築・画面作成・テストを実施。</p>
-					<ul>
+					<p class="work-summary"><strong>【概要】</strong> 社内PJ複数に対し、環境構築・画面作成・テストを実施。</p>
+					<ul class="work-details-list">
 						<li><strong>配送業：</strong> 主に環境構築・テスト実施。クライアントの要望書を確認し、内容に沿ったテストを行う。</li>
 						<li><strong>BtoC向けサービスシステム：</strong> 主に画面UI作成。仕様書に沿った画面UI作成し、テストも行う。また、仕様書に沿ってテスト仕様書も作成。</li>
 						<li><strong>車の部品販売：</strong> 主にテストを実施。仕様書に沿って画面にデータが表示されているか確認。</li>
@@ -99,67 +139,71 @@
 					<div class="work-tech">画面UI作成 / 環境構築 / テスト仕様書作成 / 各種テスト実施</div>
 				</div>
 
+				<!-- 2. IT研修：AWS -->
 				<div class="item-box">
 					<span class="work-period">IT研修</span>
 					<h3>クラウド環境構築演習</h3>
-					<p>AWSクラウドの基礎スキル受講後、学習管理システム（LMS）構築プロジェクトにてネットワーク環境構築を担当。WBS・クラウド構成図の作成、VPC・EC2・RDSを用いた開発環境の構築から機能設計、実装、試験まで遂行。
-					</p>
-					<div class="work-tech">AWS / VPC / EC2 / RDS / クラウド構成図</div>
+					<p class="work-summary"><strong>【概要】</strong> AWSクラウドの基礎スキルをOFF-JTで受講後、IT系研修事業会社の学習管理システム（LMS）構築プロジェクトにてネットワーク環境構築を担当。社員管理システム仕様書に基づくWBS・クラウド構成図の作成、およびVPC・EC2・RDSを用いた開発環境の構築から機能設計、実装、試験まで遂行。</p>
+					<div class="work-tech">VPC / EC2 / RDS / クラウド構成図 / Linux</div>
 					<div class="work-links">
 						<a href="https://github.com/dang-dinhphong/rt2-spring-app.git" target="_blank">GitHub</a>
 					</div>
 				</div>
 
+				<!-- 3. IT研修：品質管理 -->
 				<div class="item-box">
 					<span class="work-period">IT研修</span>
 					<h3>品質管理実践（テスト自動化）</h3>
-					<p>学習管理システムのテスト自動化に従事。各機能の操作フローに基づいたテストシナリオ策定・仕様書作成、およびSelenium WebDriverやJUnit
-						5を用いた単体テストコードの実装・環境構築を一貫して担当。</p>
+					<p class="work-summary"><strong>【概要】</strong> 学習管理システムのテスト自動化に従事。テスト仕様書作成、自動テストコードの実装を一貫して担当。</p>
+					<ul class="work-details-list">
+						<li><strong>テスト設計：</strong> 各機能の操作フローに基づいたテストシナリオの策定、およびテスト仕様書の作成・更新。</li>
+						<li><strong>自動テスト実装：</strong> Selenium WebDriverおよびJUnit 5を用いた単体テストコードの作成。テスト環境構築。</li>
+					</ul>
 					<div class="work-tech">Selenium / JUnit 5 / テスト設計 / 自動テスト</div>
 					<div class="work-links">
 						<a href="https://github.com/dang-dinhphong/lms-test-src-rp2.git" target="_blank">GitHub</a>
 					</div>
 				</div>
 
+				<!-- 4. IT研修：フレームワーク -->
 				<div class="item-box">
 					<span class="work-period">IT研修</span>
 					<h3>フレームワーク実践（LMS機能追加）</h3>
-					<p>SpringBoot/MyBatisの基礎受講後、学習管理システム（LMS）に対する機能追加演習。顧客より提示された変更管理台帳を元に、機能設計、実装（コーディング）、および試験を実施。</p>
-					<div class="work-tech">Spring Boot / MyBatis / Java / 機能追加</div>
+					<p class="work-summary"><strong>【概要】</strong> SpringBoot/MyBatisの基礎スキルをOFF-the-Job-Trainingで受講後に某IT系研修事業会社における学習管理システム（LMS）に対し機能追加を行う。基盤となる学習管理システムに対して、顧客より提示された変更管理台帳を元に機能設計及び実装、試験を実施。</p>
+					<div class="work-tech">Spring Boot / MyBatis / Java / 功能追加</div>
 					<div class="work-links">
 						<a href="https://github.com/dang-dinhphong/lms-src-rp1-dang.git" target="_blank">GitHub</a>
 					</div>
 				</div>
 
+				<!-- 5. IT研修：Java基礎 -->
 				<div class="item-box">
 					<span class="work-period">IT研修</span>
 					<h3>Java・OracleDB基礎 / 社員情報管理システム開発</h3>
-					<p>Java、Spring
-						Boot、OracleDBの基礎受講後、「社員情報管理システム」の開発演習に従事。既存のシステム構成を理解し、変更要求に基づいたCRUD機能、ログイン認証の実装、テスト仕様書作成から単体テストまで一貫して実施。
-					</p>
+					<p class="work-summary"><strong>【概要】</strong> Java・OracleDB基礎研修を受講後、演習として「社員情報管理システム」の開発に従事。既存のシステム構成を理解し、顧客要件に見立てた仕様に基づき、機能実装、単体テストまでを一貫して実施。変更要求に基づいたCRUD機能およびログイン認証の実装。テスト仕様書の作成および単体テストの実施。</p>
 					<div class="work-tech">Java / OOP / OracleDB / SQL / CRUD / Spring JDBC</div>
 					<div class="work-links">
-						<a href="https://github.com/dang-dinhphong/console_crud_user_team2.git"
-							target="_blank">GitHub</a>
+						<a href="https://github.com/dang-dinhphong/console_crud_user_team2.git" target="_blank">GitHub</a>
 					</div>
 				</div>
 
+				<!-- 6. 前職（最古） -->
 				<div class="item-box">
 					<span class="work-period">前職</span>
 					<h3>EC通販小売会社（広告・PR関連業務）</h3>
-					<p>インフルエンサーとタイアップしたPR動画制作の推進、SNS管理、YouTuber等へのアプローチ・交渉から情報管理まで遂行。海外拠点との連携に伴う資料翻訳や通訳業務も担当。結果として計7本のPR動画公開、ECサイトの口コミ数を合計100件増加。
-					</p>
+					<p class="work-summary"><strong>【概要】</strong> 各EC通販サイトの展開において、インフルエンサーとタイアップしたPR動画制作の推進を担当。SNSアカウントの管理をはじめ、YouTuber等インフルエンサーへのアプローチ・交渉から最終確認、情報管理まで遂行。また、海外拠点やパートナーとの連携に際し、資料翻訳や社内外の通訳業務も担当。結果的に、ECサイトの口コミ数を合計100件増加させ、計7本のPR動画公開。</p>
 					<div class="work-tech">インフルエンサーマーケティング / SNS管理 / 翻訳・通訳 / 進行管理</div>
 				</div>
 
 			</div>
 		</section>
 
+		<!-- --- SECTION 4: CONTACT --- -->
 		<section id="contact">
 			<h2>Contact</h2>
 			<div class="contact-card">
 				<p>現在、新しいプロジェクトへの参画や技術的な交流を歓迎しております。</p>
-				<a href="mailto:dang.tis2025@gmail.com" class="contact-btn">メールを送る</a>
+				<a href="mailto:your-email@example.com" class="contact-btn">メールを送る</a>
 			</div>
 		</section>
 
@@ -174,7 +218,7 @@
 		}
 		function closeMenu() {
 			if (window.innerWidth <= 992) {
-				document.getElementById("navMenu").classList.remove("active");
+				document.getElementById("navMenu").classList.remove("remove");
 			}
 		}
 	</script>

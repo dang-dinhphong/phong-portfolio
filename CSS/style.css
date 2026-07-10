@@ -250,6 +250,57 @@ h2 {
 	gap: 1.5rem;
 }
 
+/* ==========================================================================
+   BỔ SUNG MỚI: Tách cấu trúc hiển thị riêng để tối ưu hóa chữ dài
+   ========================================================================== */
+
+/* 1. Xử lý phần Profile (2 Box ngắn song song, Box 自己PR dài nằm dưới) */
+.profile-layout {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.profile-upper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+	gap: 1.5rem;
+}
+
+.profile-fullwidth {
+	width: 100%;
+}
+
+/* 2. Xử lý phần Works (Chuyển hẳn sang dạng Dòng thời gian dọc - Timeline) 
+   Giúp dự án hiện tại (nhiều chữ) không kéo chân các dự án IT School cũ */
+.timeline-layout {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.timeline-layout .item-box {
+	position: relative;
+	width: 100%; /* Trải dài 100% chiều ngang, dài ngắn tự co giãn theo dòng */
+}
+
+/* Thêm một chút chi tiết nhỏ định hình thời gian cho đẹp mắt */
+.work-period {
+	display: block;
+	font-size: 0.85rem;
+	color: var(--text-light);
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+}
+/*----------------------------------------------------------------------------*/
+
+.pr-lead { font-weight: bold; margin-bottom: 8px; font-size: 0.95rem; }
+.pr-list, .work-details-list { padding-left: 15px; font-size: 0.9rem; line-height: 1.6; }
+.work-summary { margin-bottom: 10px; font-size: 0.95rem; }
+
+/*----------------------------------------------------------------------------*/
+
+
 .item-box {
 	background: var(--card);
 	padding: 1.5rem;
