@@ -3,6 +3,15 @@ html {
 	overflow-y: scroll;
 }
 
+h1, h2, h3, .nav-links a, .site-name, .work-period, .hobby-icon {
+    font-family: 'Zen Maru Gothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+}
+
+body, p, li, .email-text {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
 :root {
 	--primary: #2563eb;
 	--bg: #f8fafc;
@@ -324,7 +333,6 @@ h2 {
 }
 
 .email-label {
-	font-weight: bold;
 	margin-right: 8px;
 	color: var(--text-muted);
 }
