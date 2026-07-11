@@ -346,24 +346,48 @@ h2 {
 }
 
 .contact-email-box {
-	margin-top: 15px;
-	padding: 12px 20px;
+	margin-top: 1.5rem;
+	padding: 0.8rem 1.2rem;
 	background-color: var(--bg-card);
-	border: 1px dashed var(--primary);
-	border-radius: 6px;
-	display: inline-block;
-	font-family: monospace;
-	font-size: 1.1rem;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	border-radius: 8px;
+	display: inline-flex;
+	align-items: center;
+	gap: 15px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
 .email-label {
-	margin-right: 8px;
-	color: var(--text-muted);
+	font-weight: bold;
+	color: var(--primary);
 }
 
 .email-text {
+	font-size: 1rem;
+	color: var(--text);
+}
+
+.copy-btn {
+	background-color: transparent; 
 	color: var(--primary);
-	user-select: all;
+	border: 1px solid var(--primary);
+	padding: 4px 12px;
+	border-radius: 6px;
+	font-size: 0.8rem;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	font-weight: 700;
+}
+
+.copy-btn:hover {
+	background-color: var(--primary);
+	color: #ffffff;
+}
+
+.copy-btn.copied {
+	background-color: #28a745;
+	color: #ffffff;
+	border-color: #28a745;
 }
 
 .work-tech {
