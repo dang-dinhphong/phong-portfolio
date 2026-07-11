@@ -23,8 +23,8 @@
 
 		<nav class="nav-container" id="navMenu">
 			<ul class="nav-links">
-				<li><a href="#introduce">Profile</a></li>
-				<li><a href="#hobbies-logic">Interests</a></li>
+				<li><a href="#profile">Profile</a></li>
+				<li><a href="#interests">Interests</a></li>
 				<li><a href="#works">Works</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
@@ -39,7 +39,7 @@
 			</div>
 		</section>
 
-		<section id="introduce">
+		<section id="profile">
 			<h2>Profile</h2>
 			<div class="profile-layout">
 				<div class="profile-upper">
@@ -87,7 +87,7 @@
 			</div>
 		</section>
 
-		<section id="hobbies-logic">
+		<section id="interests">
 			<h2>Interests</h2>
 			<div class="hobby-layout">
 				<div class="item-box hobby-box logic-card">
@@ -137,7 +137,7 @@
 						<li><strong>車の部品販売：</strong>
 							主にテストを実施。仕様書に沿って画面にデータが表示されているか確認。</li>
 					</ul>
-					<div class="work-tech">画面UI作成 / 环境構築 / テスト仕様書作成 / 各種テスト実施</div>
+					<div class="work-tech">画面UI作成 / 環境構築 / テスト仕様書作成 / 各種テスト実施</div>
 				</div>
 
 				<div class="item-box">
@@ -249,7 +249,7 @@
 		}
 		function closeMenu() {
 			if (window.innerWidth <= 992) {
-				document.getElementById("navMenu").classList.remove("remove");
+				document.getElementById("navMenu").classList.remove("active");
 			}
 		}
 		function copyEmail() {
