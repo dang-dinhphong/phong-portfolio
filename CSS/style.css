@@ -3,12 +3,7 @@ html {
 	overflow-y: scroll;
 }
 
-h1, h2, h3, .nav-links a, .site-name, .work-period, .hobby-icon {
-    font-family: 'Zen Maru Gothic', 'Noto Sans JP', sans-serif;
-    font-weight: 700;
-}
-
-body, p, li, .email-text {
+body, p, li, h1, h2, h3, .nav-links a, .site-name, .work-period, .hobby-icon, .email-text {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
