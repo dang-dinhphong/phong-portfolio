@@ -1,4 +1,3 @@
-/* --- 1. CORE LOGIC --- */
 html {
 	scroll-behavior: smooth;
 	overflow-y: scroll;
@@ -30,15 +29,11 @@ li {
 	list-style: none;
 	position: relative;
 	padding-left: 20px;
-	/* Space for the new icon */
 	margin-bottom: 10px;
 }
 
 li::before {
-	content: "•";
-	/* You can use a dash "-" or a dot "•" */
 	color: var(--primary);
-	/* Makes the bullet match your theme! */
 	font-weight: bold;
 	position: absolute;
 	left: 0;
@@ -49,7 +44,6 @@ h3{
 }
 
 /* --- 2. DESKTOP & IPAD LANDSCAPE (Width > 1024px) --- */
-/* This section keeps your original CSS exactly as you liked it */
 @media (min-width: 1025px) {
 	.main-header {
 		position: fixed;
@@ -94,13 +88,11 @@ h3{
 		>li {
 			list-style: none;
 			padding-left: 0;
-			/* Space for the new icon */
 			margin-bottom: 0;
 		}
 
 		li::before {
 			content: "";
-			/* You can use a dash "-" or a dot "•" */
 			position: absolute;
 			left: 0;
 		}
@@ -123,7 +115,6 @@ h3{
 		background: var(--primary);
 		color: white;
 		transform: translateX(5px);
-		/* Your sliding effect */
 	}
 
 	.content {
@@ -138,7 +129,6 @@ h3{
 }
 
 /* --- 3. MOBILE & IPAD PORTRAIT (Width <= 1024px) --- */
-/* This section handles the Galaxy S25 and vertical iPad layout */
 @media (max-width: 1024px) {
 	.main-header {
 		position: fixed;
@@ -170,13 +160,11 @@ h3{
 		>li {
 			list-style: none;
 			padding-left: 0;
-			/* Space for the new icon */
 			margin-bottom: 0;
 		}
 
 		li::before {
 			content: "";
-			/* You can use a dash "-" or a dot "•" */
 			position: absolute;
 			left: 0;
 		}
@@ -229,7 +217,6 @@ h3{
 	}
 }
 
-/* --- 4. SHARED STYLES (Cards, Grids, etc.) --- */
 section {
 	max-width: 900px;
 	margin: 0 auto 4rem auto;
@@ -244,17 +231,6 @@ h2 {
 	margin-bottom: 1.5rem;
 }
 
-.grid-layout {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-	gap: 1.5rem;
-}
-
-/* ==========================================================================
-   BỔ SUNG MỚI: Tách cấu trúc hiển thị riêng để tối ưu hóa chữ dài
-   ========================================================================== */
-
-/* 1. Xử lý phần Profile (2 Box ngắn song song, Box 自己PR dài nằm dưới) */
 .profile-layout {
 	display: flex;
 	flex-direction: column;
@@ -271,8 +247,6 @@ h2 {
 	width: 100%;
 }
 
-/* 2. Xử lý phần Works (Chuyển hẳn sang dạng Dòng thời gian dọc - Timeline) 
-   Giúp dự án hiện tại (nhiều chữ) không kéo chân các dự án IT School cũ */
 .timeline-layout {
 	display: flex;
 	flex-direction: column;
@@ -281,10 +255,9 @@ h2 {
 
 .timeline-layout .item-box {
 	position: relative;
-	width: 100%; /* Trải dài 100% chiều ngang, dài ngắn tự co giãn theo dòng */
+	width: 100%;
 }
 
-/* Thêm một chút chi tiết nhỏ định hình thời gian cho đẹp mắt */
 .work-period {
 	display: block;
 	font-size: 0.85rem;
@@ -292,19 +265,11 @@ h2 {
 	margin-bottom: 0.5rem;
 	font-weight: 600;
 }
-/*----------------------------------------------------------------------------*/
 
 .pr-lead { font-weight: bold; margin-bottom: 8px; font-size: 0.95rem; }
 .pr-list, .work-details-list { padding-left: 15px; font-size: 0.9rem; line-height: 1.6; }
 .work-summary { margin-bottom: 10px; font-size: 0.95rem; }
 
-/*----------------------------------------------------------------------------*/
-
-/* ==========================================================================
-   PERSONALIZATION STYLES (Dang Dinh Phong Custom)
-   ========================================================================== */
-
-/* Bố cục cho phần Sở thích & Paiza */
 .hobby-layout {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
@@ -325,32 +290,49 @@ h2 {
 }
 
 .hobby-header h3 {
-	padding-bottom: 0; /* Gộp chung dòng với Icon */
+	padding-bottom: 0;
 }
 
 .hobby-icon {
 	font-size: 1.5rem;
 }
 
-/* Hiệu ứng viền chuyển màu tinh tế cho ô Paiza (Tạo điểm nhấn thị giác) */
 .logic-card {
 	border-left: 4px solid var(--primary);
 }
 
-/* Đổi dấu chấm đầu dòng (bullet) thô kệch thành các Icon mang tính chất Công nghệ & Tăng tiến (Như level-up Pokémon) */
 .timeline-layout li::before {
-	content: "▹"; /* Dấu mũi tên hướng tới trước, lean và chuyên nghiệp hơn dấu chấm */
+	content: "▶";
 	color: var(--primary);
 	font-weight: bold;
 }
 
 .pr-list li::before {
-	content: "⚡"; /* Thể hiện sự nhanh nhạy, tự động thích ứng */
+	content: "⚡";
 	font-size: 0.85rem;
 }
 
-/*----------------------------------------------------------------------------*/
+.contact-email-box {
+	margin-top: 15px;
+	padding: 12px 20px;
+	background-color: var(--bg-card);
+	border: 1px dashed var(--primary);
+	border-radius: 6px;
+	display: inline-block;
+	font-family: monospace;
+	font-size: 1.1rem;
+}
 
+.email-label {
+	font-weight: bold;
+	margin-right: 8px;
+	color: var(--text-muted);
+}
+
+.email-text {
+	color: var(--primary);
+	user-select: all;
+}
 
 .item-box {
 	background: var(--card);
@@ -365,42 +347,22 @@ h2 {
 	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Updated Contact Card (Matches your item-boxes) --- */
 .contact-card {
-    background: var(--card); /* Matches your white background cards */
+    background: var(--card);
     color: var(--text);
     padding: 2.5rem;
-    border-radius: 16px; /* Matching the 16px from your item-boxes */
+    border-radius: 16px; 
     text-align: center;
-    border: 1px solid #e2e8f0; /* Subtle border like the hover state of boxes */
+    border: 1px solid #e2e8f0;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
 }
 
-/* Hover effect to match your other boxes */
 .contact-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Updated Contact Button (Zoom effect) --- */
-.contact-btn {
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.8rem 2.5rem;
-    background: var(--primary);
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth zoom */
-}
-
-.contact-btn:hover {
-    /* 👇 This creates the "bigger" zoom-in effect */
-    transform: scale(1.1); 
-    box-shadow: 0 10px 15px rgba(37, 99, 235, 0.2); /* Subtle glow matching primary color */
-}
 .work-tech {
     display: inline-block;
     margin-top: 15px;
@@ -413,7 +375,7 @@ h2 {
     border: 1px solid #e2e8f0;
     margin-bottom:10px;
 }
-/* --- 1. The Clean Setup --- */
+
 .work-links {
     margin-top: 15px;
     display: flex;
@@ -429,40 +391,17 @@ h2 {
     align-items: center;
     gap: 5px;
     
-    /* Give it a permanent shape so it doesn't "jump" on hover */
     padding: 5px 12px;
     border: 1px solid var(--primary);
     border-radius: 6px;
     transition: all 0.3s ease;
 }
 
-/* --- 2. The Smooth Hover --- */
 .work-links a:hover {
     background-color: var(--primary);
     color: white;
-    /* Optional: subtle lift instead of forced padding */
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
-}
-
-.profile-list {
-    list-style: none;
-    line-height: 2;
-}
-
-.profile-list strong {
-    color: var(--primary); /* Keeps the keys blue and consistent */
-    margin-right: 10px;
-    display: inline-block;
-    width: 50px; /* Aligns all the text perfectly */
-}
-
-.sub-text {
-    font-size: 0.7rem; /* Slightly smaller font */
-    color: var(--text-light); /* Greyer color so it's not the first thing they see */
-    margin-top: 5px;
-    border-top: 1px solid #e2e8f0; /* Subtle line to separate it from core info */
-    padding-top: 5px;
 }
 
 .footer{
