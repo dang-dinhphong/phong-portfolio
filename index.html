@@ -229,7 +229,8 @@
 				<p>現在、新しいプロジェクトへの参画や技術的な交流を歓迎しております。<br>ご連絡は下記メールアドレスまでお願いいたします。</p>
 				<div class="contact-email-box">
 					<span class="email-label">Email:</span>
-					<span class="email-text">dang.tis2025@gmail.com</span>
+					<span id="emailText" class="email-text">dang.tis2025@gmail.com</span>
+					<button id="copyBtn" class="copy-btn" onclick="copyEmail()">コピー</button>
 				</div>
 			</div>
 		</section>
@@ -247,6 +248,22 @@
 			if (window.innerWidth <= 992) {
 				document.getElementById("navMenu").classList.remove("remove");
 			}
+		}
+		function copyEmail() {
+			const emailText = document.getElementById("emailText").innerText;
+			const copyBtn = document.getElementById("copyBtn");
+
+			navigator.clipboard.writeText(emailText).then(() => {
+				copyBtn.innerText = "コピーしました";
+				copyBtn.classList.add("copied");
+
+				setTimeout(() => {
+					copyBtn.innerText = "コピーする";
+					copyBtn.classList.remove("copied");
+				}, 2000);
+			}).catch(err => {
+				console.error("コピー失敗: ", err);
+			});
 		}
 	</script>
 </body>

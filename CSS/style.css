@@ -316,27 +316,6 @@ h2 {
 	font-size: 0.85rem;
 }
 
-.contact-email-box {
-	margin-top: 15px;
-	padding: 12px 20px;
-	background-color: var(--bg-card);
-	border: 1px dashed var(--primary);
-	border-radius: 6px;
-	display: inline-block;
-	font-family: monospace;
-	font-size: 1.1rem;
-}
-
-.email-label {
-	margin-right: 8px;
-	color: var(--text-muted);
-}
-
-.email-text {
-	color: var(--primary);
-	user-select: all;
-}
-
 .item-box {
 	background: var(--card);
 	padding: 1.5rem;
@@ -364,6 +343,27 @@ h2 {
 .contact-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-email-box {
+	margin-top: 15px;
+	padding: 12px 20px;
+	background-color: var(--bg-card);
+	border: 1px dashed var(--primary);
+	border-radius: 6px;
+	display: inline-block;
+	font-family: monospace;
+	font-size: 1.1rem;
+}
+
+.email-label {
+	margin-right: 8px;
+	color: var(--text-muted);
+}
+
+.email-text {
+	color: var(--primary);
+	user-select: all;
 }
 
 .work-tech {
